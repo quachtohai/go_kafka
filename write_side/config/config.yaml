@@ -1,0 +1,34 @@
+serviceName: writer_service
+logger:
+  level: debug
+  devMode: false
+  encoder: json
+kafka:
+  brokers: [ "localhost:9092" ]
+  groupID: writer_microservice_consumer
+  initTopics: true
+kafkaTopics:
+  eventCreate:
+    topicName: event_create
+    partitions: 10
+    replicationFactor: 1
+  eventUpdate:
+    topicName: event_update
+    partitions: 10
+    replicationFactor: 1
+  eventCreated:
+    topicName: event_created
+    partitions: 10
+    replicationFactor: 1
+  eventUpdated:
+    topicName: event_updated
+    partitions: 10
+    replicationFactor: 1
+  eventDelete:
+    topicName: event_delete
+    partitions: 10
+    replicationFactor: 1
+  eventDeleted:
+    topicName: event_deleted
+    partitions: 10
+    replicationFactor: 1
